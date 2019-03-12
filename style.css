@@ -5,6 +5,7 @@ body {
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
 
+/* menu */
 #menu {
   width: 100%;
   height: 65px;
@@ -28,44 +29,16 @@ body {
   -webkit-backface-visibility: hidden;
   -webkit-transition: 200ms all;
 }
-#menu-headers li a {
-  text-transform: uppercase;
-  font-family: 'Squada One', cursive;
-  font-weight: 800;
-  display: block;
-  
-  padding: 2px 10px;
-  color: #333;
-  font-size: 35px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-  background: #FFF;
-  text-shadow: 
-		1px 1px 0px #FFF, 
-		2px 2px 0px #999,
-		3px 3px 0px #FFF;
-	background-image: -webkit-linear-gradient(top, transparent 25%);
-	-webkit-transition: 1s all;
-	background-image: -webkit-linear-gradient(left top, 
-		transparent 50%, transparent 50%, 
-		rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 25%, 
-		transparent 25%, transparent 25%, 
-		rgba(0,0,0,.15) 25%);
-  background-size: 4px 4px;
-	box-shadow: 
-		0 0 0 1px rgba(0,0,0,.4) inset, 
-		0 0 20px -5px rgba(0,0,0,.4),
-		0 0 0px 3px #FFF inset;
-}
+
 #menu-headers li:hover {
 	width: 203px;
 	margin: 0 -5px;
 }
+
 #menu-headers a:hover {
   color: #00a38d;
 }
+
 #menu-headers li:after,
 #menu-headers li:before {
   content: '';
@@ -74,29 +47,40 @@ body {
   height: 100%;
   background: #BBB;
   -webkit-transform: skewY(8deg);
-  x-index: -3;
+  z-index: -3;
 	border-radius: 4px;
 }
+
 #menu-headers li:after {
 	background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) );
   right: 0;
   top: -4px; 
 }
+
 #menu-headers li:before {
   left: 0;
   bottom: -4px;
   background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) );
 }
+
 #menu-icons{
 	margin-left: 89%;
 	margin-top: -79px;
 	display: block;
 }
 
+/* section */
+
 section hr{
 	border-top: 3px double #5a4f4f;
 	z-index: 1;
 }
+
+.section{
+	padding-top: 10%;
+	z-index: 0;
+}
+/* images */
 
 .middle{
 	position: absolute;
@@ -116,29 +100,10 @@ section hr{
 	position: relative;
 }
 	
-.image h1{
-    position: absolute;
-    top: 7%;
-    left: 7%;
-    right: 0;
-    font-size: 20px;
-    width: 100%;
-    height: 26px;
-    padding: 0;
-    margin: 0;
-    margin-top: -13px; /* 1/2 height */
-	font-weight: 800!important;
-	color: #333;
-	font-size: 35px;
-	text-shadow: 
-			1px 1px 0px #FFF, 
-			2px 2px 0px #999,
-			3px 3px 0px #FFF;
-}
 .image img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+	width: 100%;
+	height: 100%;
+	position: absolute; 
 	border-radius: 30px;
 	opacity: 0.3;
 }
@@ -174,18 +139,22 @@ section hr{
 	border: 1px solid rgba(0,0,0,0.3);
 	box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
 	max-width: 100%;
-  }
+	}
+	
   .grid figure img:hover {
 	border: 4px solid rgba(0,0,0,0.3);
 	height: 200%;
 	width: 200%;
 	border-radius: 25px;
-  }
+	}
+	
   .grid figure:nth-child(2) {
 	grid-column: span 3;
 	grid-row: span 2;
 	max-width: 100%;
-  }
+	}
+	
+	/* playlist */
   .back{
 	background: #FFF;
 	text-shadow: 
@@ -204,37 +173,17 @@ section hr{
 		  0 0 0 1px rgba(0,0,0,.4) inset, 
 		  0 0 20px -5px rgba(0,0,0,.4),
 		  0 0 0px 3px #FFF inset;
-  }
-  .size{
-	width:600px;
-	 height:400px;
-	  opacity: 0.6;
-	   position: absolute; 
-	   left: 30%; 
-	   border-radius: 30px;
-	}
+	}	
+	.size{
+		width:600px;
+		 height:400px;
+			opacity: 0.6;
+			 position: absolute; 
+			 left: 30%; 
+			 border-radius: 30px;
+		}
 	
-	#playlist div h2{
-		position: absolute;
-		bottom: 106%;
-    left: 7%;
-    right: 0;
-    font-size: 20px;
-    width: 100%;
-    height: 26px;
-    padding: 0;
-    margin: 0;
-    margin-top: -13px; /* 1/2 height */
-	font-weight: 800!important;
-	color: rgb(17, 2, 2);
-	font-size: 35px;
-	text-shadow: 
-			1px 1px 0px #FFF, 
-			2px 2px 0px #999,
-			3px 3px 0px #FFF;
-	opacity: 1!important;
-	}
-	
+	/*Q&A*/
 	.animate{
 		transition: all .3s;
 	}
@@ -242,6 +191,7 @@ section hr{
 	input[name=question]{
 			display: none;
 	}
+
 	input[name=question] + label{
 			position: relative;
 			display: block;
@@ -288,14 +238,8 @@ section hr{
 			color: rgb(0, 0, 0);
 	}
 	
-	.fixed-height{
-			height: 50px;
-			overflow: hidden;
-			opacity: 1 !important;
-	}
-
-
-input[type=text], select, textarea {
+	/* email */
+	input[type=text], select, textarea {
   width: 100%; 
   padding: 12px;  
   border: 1px solid #ccc; 
@@ -306,29 +250,97 @@ input[type=text], select, textarea {
 	resize: vertical ;
 }
 
-input[type=button] {
+input[type=sumbit] {
   background-color: #5a9aa8;
   color: rgb(0, 0, 0);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
 }
-.h3{
-	position: absolute;
-	width: 100%;
-	height: 26px;
-	margin-top: -45px; 
-font-weight: 800!important;
-color: rgb(17, 2, 2);
-font-size: 35px;
-text-shadow: 
+
+/* headers */
+
+#menu-headers li a {
+  text-transform: uppercase;
+  font-family: 'Squada One', cursive;
+  font-weight: 800;
+  display: block;
+  
+  padding: 2px 10px;
+  color: #333;
+  font-size: 35px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+  text-shadow: 
 		1px 1px 0px #FFF, 
 		2px 2px 0px #999,
 		3px 3px 0px #FFF;
+	background-image: -webkit-linear-gradient(top, transparent 25%);
+	-webkit-transition: 1s all;
+	background-image: -webkit-linear-gradient(left top, 
+		transparent 50%, transparent 50%, 
+		rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 25%, 
+		transparent 25%, transparent 25%, 
+		rgba(0,0,0,.15) 25%);
+  background-size: 4px 4px;
+	box-shadow: 
+		0 0 0 1px rgba(0,0,0,.4) inset, 
+		0 0 20px -5px rgba(0,0,0,.4),
+		0 0 0px 3px #FFF inset;
 }
-.section{
-	padding-top: 10%;
-	z-index: 0;
+.section h3{
+	position: absolute;
+	width: 100%;
+	height: 26px;
+	margin-top: -30px; 
+	font-weight: 800!important;
+	color: rgb(17, 2, 2);
+	font-size: 35px;
+	text-shadow: 
+			1px 1px 0px #FFF, 
+			2px 2px 0px #999,
+			3px 3px 0px #FFF;
 }
 
-	
+#playlist div h2{
+	position: absolute;
+	bottom: 106%;
+	left: 7%;
+	right: 0;
+	font-size: 20px;
+	width: 100%;
+	height: 26px;
+	padding: 0;
+	margin: 0;
+	margin-top: -13px; 
+	font-weight: 800!important;
+	color: rgb(17, 2, 2);
+	font-size: 35px;
+	text-shadow: 
+			1px 1px 0px #FFF, 
+			2px 2px 0px #999,
+			3px 3px 0px #FFF;
+	opacity: 1!important;
+}
+	.image h1{
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    right: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    margin-top: -13px; 
+	font-weight: 800!important;
+	color: #333;
+	font-size: 35px;
+	text-shadow: 
+			1px 1px 0px #FFF, 
+			2px 2px 0px #999,
+			3px 3px 0px #FFF;
+}
